@@ -11,7 +11,7 @@
 		
 		// Image background
 		$.vegas({
-            src:'assets/images/IMG_6607_edit2.JPG'
+            src:'assets/images/IMG_6607_edit2.jpg'
         });
 
         $.vegas('overlay', {
