@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sevil & Cihan Evleniyor..</title>
+
+	
+	<link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
+
+    <!-- CSS -->
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Font Awesome CSS -->
+    <link href="./css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <!-- Animate css -->
+    <link href="./css/animate.css" rel="stylesheet" media="screen">
+    <!-- Custom styles CSS -->
+    <link href="./css/style.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="font-face/entypo.css" />
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet" type="text/css">
+	   	<script src="./Zooplex - Coming Soon Template_files/jquery-1.11.0.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+
+	.entypo {
+    font: normal 2em/0.7em 'entypo';
+    color: #ff46af; 
+   }
+   
+   	.entypo-small {
+    font: normal 1.2em/0.7em 'entypo';
+    color: #ff46af; 
+   }
+ 
+/* ---------------------------------------------- /*
+ * Map
+/* ---------------------------------------------- */
+
+.gmap {
+	padding: 20px;
+	width: 100%;
+	height: 450px;
+	position: relative;
+	overflow: hidden;
+}
+
+h1.infotitle {
+  font: 700 3em/1em 'Amatic SC', sans-serif;
+  margin: 0.7em 0; }
+
+.txtwhite {
+  color: #fff; }
+
+.txtpink {
+  color: #ff46af; }
+
+.txtbrightpink {
+  color: #ffe4f3; }
+
+.txtblue {
+  color: #3399ff; }
+
+.txtdarkblue {
+  color: #4a97bd; }
+
+.txtpurple {
+  color: #5c5c84; }
+
+.txtdarkgrey {
+  color: #666; }
+
+.txtbronze {
+  color: #8c7466; }
+
+.bgpurple {
+  background: #5c5c84; }  
+  
+#map {
+	width: 100%;
+	height: 450px;
+}
+ 
+	p.highlight-map {
+     font: 700 2em/1em 'Amatic SC', sans-serif !important;
+     text-align: left; 
+	  color: #ff46af;
+    }
+
+    p.map {
+    font: 600 1.2em/1.4em 'Josefin Sans', sans-serif;
+	color: #000;
+    text-align: left; 
+	}	
+	
+	a {
+     color: #4a97bd;
+     text-decoration: none;
+	}
+	
+	a:hover, a:focus {
+     color: #ff46af;
+     text-decoration: none;
+    }
+	
+	*/
+/* General */
+section {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  width: 100%; }
+
+/* Home */
+section#home {
+  position: relative;
+  height: 100%;
+  background-size: cover;
+  z-index: 5; }
+  
+section#info{
+  display: block;
+  position: relative;
+  min-height: 600px; 
+  background-color: #ded1ca; 
+  background: url("./assets/images/zigzag.png") top repeat-x #ded1ca; 
+}  
+
+section#todo{
+  display: block;
+  position: relative;
+  min-height: 600px; 
+  background-color: white; 
+  background: url("./assets/images/zigzag.png") top repeat-x #ffffff; 
+} 
+
+section#harita{
+  display: block;
+  position: relative;
+ z-index: 5;
+ background: url("./assets/images/zigzag.png") top repeat-x #ded1ca; 
+}
+
+section#footer{
+  display: block;
+  position: relative;
+ z-index: 5;
+ background: url("./assets/images/zigzag.png") top repeat-x #ffffff; 
+}
+  
+/* Rotate elsements
+------------------------------------------------- */
+
+.scroll-down, .scroll-down:hover i, .feature-icon, .feature:hover > .feature-icon i, .testimonials .avatar, .carousel-indicators li {
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		 -o-transform: rotate(45deg);
+			transform: rotate(45deg);
+}
+
+.scroll-down:hover, .scroll-down i, .feature-icon i, .feature:hover > .feature-icon, .testimonials .avatar img {
+	-webkit-transform: rotate(-45deg);
+	   -moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		 -o-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+}
+  
+.scroll-down {
+	background: rgba(0,0,0,.5);
+	border: 2px solid #BB9977;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 10px 0 0 11px;
+	font-size: 26px;
+	line-height: 45px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.light {
+	padding: 90px 0 90px;
+}
+
+.light:after {
+	top: 100%;
+	background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, #FFFFFF), color-stop(0.25, #FFFFFF));
+	background-image: linear-gradient(135deg, rgba(255,255,255,1) 25%, transparent 25%),   linear-gradient(225deg, rgba(255,255,255,1) 25%, transparent 25%);
+	background-position: 50%;
+
+}
+
+.light:before, .light:after {
+	right: 0;
+	left: 0;
+	z-index: 10;
+	display: block;
+	height: 90px;
+	background-size: 50px 100%;
+}
+
+.light:before, .light:after {
+	position: absolute;
+	content: '';
+	pointer-events: none;
+}
+
+.fit { /* set relative picture size */
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+</style>
+   <script>
+
+var lang = 'tr';
+var language = window.navigator.userLanguage || window.navigator.language;
+if(language != 'tr'){
+	lang = 'en';
+}
+
+var descBeyazParkArr = {
+
+	tr : '<div style="overflow: auto;"><p class="highlight-map txtpink"><strong>Saat: 19.00</strong> - Aksam burada egleniyoruz :)</p>'+
+  '<p class="map"><strong>Park Beyaz Kır Düğün Alanı</strong><br>Şehit Jandarma Remzi Avcı Cd. Dalyan/MUĞLA</p><p class="map">'+
+  '<a href="https://goo.gl/2C7weh" target="_blank"><span class="entypo"> &#59172;</span> &nbsp;Konumu aç</a><br>'+
+  '<a href="https://goo.gl/qyeZNd" target="_blank"><span class="entypo">&#10150;</span> Rota hesapla</a></p></div>',
+	
+	en: '<div style="overflow: auto;"><p class="highlight-map txtpink"><strong>19.00</strong> - Wedding Party :)</p>'+
+  '<p class="map"><strong>Address: Park Beyaz Kır Düğün Alanı</strong><br>Şehit Jandarma Remzi Avcı Cd. Dalyan/MUĞLA</p><p class="map">'+
+  '<a href="https://goo.gl/2C7weh" target="_blank"><span class="entypo"> &#59172;</span> &nbsp;Open Location</a><br>'+
+  '<a href="https://goo.gl/qyeZNd" target="_blank"><span class="entypo">&#10150;</span> Directions to here</a></p></div>'
+
+}
+
+var descDugunEviArr = {
+	tr: '<div style="overflow: auto;"><p class="highlight-map txtpink">Saat: 11.00 - 16.00 Arası Dügün Yemegi</p>'+
+  '<p class="map">Atatürk Mh. Lale Sokak No:36 Ortaca/MUĞLA</p><p class="map">'+
+  '<a href="https://goo.gl/yb9p7V" target="_blank"><span class="entypo"> &#59172;</span> &nbsp;Konumu aç</a><br>'+
+  '<a href="https://goo.gl/a4MSnx" target="_blank"><span class="entypo">➦</span>Rota hesapla</a></p></div>',
+  
+    en: '<div style="overflow: auto;"><p class="highlight-map txtpink">Lunch - From 11.00 to 16.00</p>'+
+  '<p class="map">Address: Atatürk Mh. Lale Sokak No:36 Ortaca/MUĞLA</p><p class="map">'+
+  '<a href="https://goo.gl/yb9p7V" target="_blank"><span class="entypo"> &#59172;</span> &nbsp;Open Location</a><br>'+
+  '<a href="https://goo.gl/a4MSnx" target="_blank"><span class="entypo">➦</span>Directions to here</a></p></div>'
+}
+
+var descDlmAirportArr = {
+    tr: '<div style="overflow: auto;"><p class="highlight-map txtpink">Dalaman Havalimani</p><p class="map">'+
+   '<a href="https://goo.gl/y1SQvm" target="_blank"><span class="entypo"> &#59172;</span> &nbsp;Konumu aç</a><br>'+
+   '<a href="https://goo.gl/Yx3YhZ" target="_blank"><span class="entypo">➦</span> Rota hesapla</a></p></div>',
+   en: '<div style="overflow: auto;"><p class="highlight-map txtpink">Dalaman Airport</p><p class="map">'+
+   '<a href="https://goo.gl/y1SQvm" target="_blank"><span class="entypo"> &#59172;</span> &nbsp;Open Location</a><br>'+
+   '<a href="https://goo.gl/Yx3YhZ" target="_blank"><span class="entypo">➦</span> Directions to here</a></p></div>'
+   
+}
+
+var introArr = {
+   tr: 'Haydi gelin bu keyifli yaz akşamının tadını hep beraber çıkaralım..<br>Düğünümüze bekliyoruz..',
+   en: "Let's have an unforgettable night together..<br>Join us on our big day!"
+}
+
+var weddDateArr = {
+	tr: '5 Eylül 2015',
+	en: '5<sup>th</sup> September 2015'
+}
+
+
+
+$( document ).ready(function() {
+    document.getElementById('intro').innerHTML =  introArr[lang];
+	document.getElementById('wedding-date').innerHTML = weddDateArr[lang];
+	if ( lang == 'tr') {
+	   $('.turkish').show();
+	   $('.english').hide();
+	} else {
+		$('.turkish').hide();
+		$('.english').show();
+	}
+	
+});
+
+
+
+
+
+
+//document.getElementById('preview').innerHTML = out;
+
+function initialize() {
+  var posBeyazPark = new google.maps.LatLng(36.8462975,28.6364893);
+  var posDugunEvi  = new google.maps.LatLng(36.8430817,28.7653958);
+  var posDlmAirport = new google.maps.LatLng(36.7242871,28.7899224);
+
+  var mapOptions = {
+    zoom: 10,
+    center: new google.maps.LatLng(36.8004693,28.7164809),
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  
+  //http://www.entypo.com/
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  
+  var styles = [
+					  {
+					    stylers: [
+					      { gamma: 1.56 },
+					      { saturation: -10 },
+					      { hue: "#3399ff" }
+					    ]
+					  }
+					];
+					
+  var styles2 = [{"elementType":"geometry","stylers":[{"hue":"#ff4400"},{"saturation":-68},{"lightness":-4},{"gamma":0.72}]},{"featureType":"road","elementType":"labels.icon"},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"hue":"#0077ff"},{"gamma":3.1}]},{"featureType":"water","stylers":[{"hue":"#00ccff"},{"gamma":0.44},{"saturation":-33}]},{"featureType":"poi.park","stylers":[{"hue":"#44ff00"},{"saturation":-23}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"hue":"#007fff"},{"gamma":0.77},{"saturation":65},{"lightness":99}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"gamma":0.11},{"weight":5.6},{"saturation":99},{"hue":"#0091ff"},{"lightness":-86}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"lightness":-48},{"hue":"#ff5e00"},{"gamma":1.2},{"saturation":-23}]},{"featureType":"transit","elementType":"labels.text.stroke","stylers":[{"saturation":-64},{"hue":"#ff9100"},{"lightness":16},{"gamma":0.47},{"weight":2.7}]}]					
+  map.setOptions({styles: styles2, scrollwheel: false});
+
+  var descBeyazPark = descBeyazParkArr[lang]; 
+  var descDugunEvi = descDugunEviArr[lang]; 
+  var descDlmAirport = descDlmAirportArr[lang]; 
+  
+  var infoBeyazPark = new google.maps.InfoWindow({
+      content: descBeyazPark
+  });
+  
+  var infoDugunEvi = new google.maps.InfoWindow({
+      content: descDugunEvi
+  });
+  
+  var infoDlmAirport = new google.maps.InfoWindow({
+      content: descDlmAirport
+  });
+
+     var heart = {
+	  path: "M36.3,17.5L20,32.4L3.7,17.5c-4.2-4-4.2-10.3,0-14.2c3.8-3.4,9.9-3.4,13.7,0L20,5.6l2.6-2.3c3.7-3.4,9.8-3.4,13.6,0C40.5,7.2,40.5,13.5,36.3,17.5z",
+	  fillColor: "#ff46af",
+	  fillOpacity: 1,
+	  scale: 1,
+	  strokeColor: "white",
+	  anchor: new google.maps.Point(20,30)
+	};
+  
+  
+  var markerBeyazPark = new google.maps.Marker({
+      position: posBeyazPark,
+      map: map,
+      title: 'Park Beyaz',
+	  icon: 'marker-icon-small.png'
+  });
+  
+  var markerDugunEvi = new google.maps.Marker({
+      position: posDugunEvi,
+      map: map,
+      title: 'Düğün Evi'
+  });
+  
+  var markerDlmAirport = new google.maps.Marker({
+      position: posDlmAirport,
+      map: map,
+      title: 'Dalaman Havalimani'
+  });
+  
+
+  
+  google.maps.event.addListener(markerBeyazPark, 'click', function() {
+    infoBeyazPark.open(map,markerBeyazPark);
+	infoDugunEvi.close();
+	infoDlmAirport.close();
+  });
+  
+  google.maps.event.addListener(markerDugunEvi, 'click', function() {
+    infoDugunEvi.open(map,markerDugunEvi);
+	infoBeyazPark.close();
+	infoDlmAirport.close();
+  });
+  
+  google.maps.event.addListener(markerDlmAirport, 'click', function() {
+    infoDlmAirport.open(map,markerDlmAirport);
+	infoBeyazPark.close();
+	infoDugunEvi.close();
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+</head>
+<body style="overflow: visible;">
+
+	<!-- Preloader -->
+	<div id="preloader" style="display: block;">
+	    <div id="status" style="display: block;">
+	    	<div class="status-mes">loading...</div>
+	    </div>
+	</div>
+
+
+	    <section id="home" style="position:relative;">
+		<div class="container" style="position:relative;height:100%">
+			<div class="row">
+				<div class="col-sm-12" style="text-align:center;">
+
+					<div class="title">
+						<h1>Sevil <span class="entypo-small">♥</span> Cihan</h1>
+					</div>
+
+					<div class="slogan" id="intro">
+
+					</div>
+				</div>
+			</div>
+				<div class="row" style="position:absolute; bottom: 60px;width: 100%;">
+				<div class="col-sm-12" >
+				
+							<div class="countdown-time" style='max-width:500px;margin:auto;' data-date="2015-09-05 19:00:00" data-timer="900" data-tc-id="cde3ac39-cf22-7bfd-adb2-709821192db8">
+							<div class="time_circles" style="margin:auto;"></div>
+					</div>
+				</div>
+				</div>		
+				<div class="row" style="position:absolute; bottom: 0;width: 100%;">
+				<div class="col-sm-12">
+				<div class="title">
+						<h1 id="wedding-date">5 Eylül 2015</h1>
+					</div>
+				</div>
+				</div>
+
+		</div><!-- /.container --> 
+
+		</section>
+		
+		
+		<section id='info'>
+		<div class="container">
+				<div class="row trauung english">
+				    <div class="col-sm-12" style="text-align:center;">
+						<h1 class="txtpink infotitle" style="margin-bottom:10px;">THE BIG DAY!</h1>
+					</div>
+					<div class="col-sm-12 trauungcontent txtbronze" style="text-align:center;">
+				    <img src="./assets/images/park_beyaz6.jpg" style='max-width:100%;max-height:100%;margin-bottom:10px'></img>
+					
+					</div >
+					<div class="col-sm-12 trauungcontent txtbronze" style="text-align:center;">
+					<p class='txtblue'>First of all, we are very happy to have you at our wedding..! </p>
+					</div>
+					
+					<div class="col-sm-6 trauungcontent txtbronze">
+
+						<p>We planned a traditional wedding lunch for you. You can join any time <span class='txtpink'>from 11:00 till 16:00</span> in front of Cihan's parent's house. There you will have the chance to taste various local Turkish courses.</p>
+						</p>
+						<p>After lunch you will have time to energize and get ready for the wedding party. We will start to welcome our guests at <span class='txtpink'>19:00</span> in <span class='txtpink'>Park Beyaz Kır Dügün Alanı</span>. <br></p>
+						<br>
+						</div>
+					<div class="col-sm-6 trauungcontent txtbronze">
+<p>Before the main crowd arrives (around 18:00), we want to have photo shooting at the wedding place together. If you want to be in those photos, you are most welcome :)
+<br><br>It will be an outdoor wedding, and the weather is expected to be delightful, 25 °C with a clear sky. 
+Don't forget to put on your dancing shoes, it will be a long night and you will be dancing a lot ;)</p><br>
+					</div>
+					<div class="col-sm-4 trauungcontent txtbronze">
+					<h1 class="txtpink infotitle" style="margin-bottom:10px;">Time Plan</h1>
+					<p>11:00 &nbsp;&nbsp;Lunch<br>
+					18:00 &nbsp;&nbsp;Photo Shooting at Park Beyaz<br>
+					19:00 &nbsp;&nbsp;Welcoming guests at Park Beyaz<br>
+					20:30 &nbsp;&nbsp;Bride & Groom first dance<br>
+					22:00 &nbsp;&nbsp;Wedding Cake :) <br>
+					23:00 &nbsp;&nbsp;DJ on the stage
+					</p>
+					
+					</div>
+					<div class="col-sm-4 trauungcontent txtbronze">
+					<h1 class="txtpink infotitle" style="margin-bottom:10px;">How to reach</h1>
+					<p> The wedding place is located approximately 25 km away from <a href='http://www.yda.aero/' target='_blank'>Dalaman Airport</a>. See below also for map. Please let us know your travel plans. 
+					We will try to pick you up from airport.</p>
+					<p><span class='txtpink'><strong>Tip!</strong><br></span> We don't recommend you to exchange your money at the airport due to poor rates. You can exchange at the banks in Ortaca or Dalyan. Many places accept credit cards, but you may need to pay in Turkish lira as well (e.g. in buses, taxis, kiosk etc..).</p>
+					
+					</div>
+					<div class="col-sm-4 trauungcontent txtbronze">
+					<h1 class="txtpink infotitle" style="margin-bottom:10px;">Where to Stay</h1>
+					<p>The best place to stay nearby is <a href="http://goo.gl/7PXjmI" target='_blank'>Dalyan</a></span>. It offers mostly bed & breakfast alongside a beautiful canal. Price ranges from 10€-40€ per person. <br>
+					</p><p>If you are seeking for luxury, hotels at Sarigerme Beach (30 km to wedding location) would be a better option. It offers 4 or 5 Star all inclusive hotels.
+					
+					
+					</p>
+					</div>
+					
+
+					
+
+				</div>
+				
+				<div class="row trauung turkish">
+					<div class="col-sm-12" style="text-align:center;">
+						<h1 class="txtpink infotitle" style="margin-bottom:10px;">BÜYÜK GÜN!</h1>
+					</div>
+					<div class="col-sm-12 trauungcontent txtbronze" style="text-align:center;">
+				    <img src="./assets/images/park_beyaz6.jpg" style='max-width:100%;max-height:100%;margin-bottom:10px'></img>
+					</div >
+					<div class="col-sm-12 trauungcontent txtbronze" style="text-align:center;">
+						<p class='txtblue'>Her şeyden önce, sizi düğünümüzde görmekten çok mutluyuz..! </p>
+					</div>
+
+					<div class="col-sm-6 trauungcontent txtbronze">
+
+						<p>Öğle saatlerinde düğün evi yakınında geleneksel düğün yemeği verilecek. Saat <span class='txtpink'>11:00'den 16:00'ya</span> kadar istediğiniz zaman gelip, Ege mutfağının vazgeçilmezi yoğurtlamaların ve keşkeğimizin tadına bakabilirsiniz.</p>
+						</p>
+						<p>Yemekten sonra düğün icin hazırlanıp, biraz da enerji toplamaya vaktiniz olacak. Sizleri saat <span class='txtpink'>19:00</span>'da <span class='txtpink'>Park Beyaz Kır Düğün Alanı</span>'nda bekliyor olacağız.
+							<br>
+						</p>
+						<br>
+					</div>
+
+
+					<div class="col-sm-6 trauungcontent txtbronze">
+						<p>Düğün başlamadan önce (18:00 sularında), düğün alanında arkadaşlarımızla fotoğraf çekimi planlıyoruz. Bizlerle aynı karede olmak isteyen arkadaslarımızı bekliyoruz.
+							<br>
+							<br>Düğünümüz açık havada, kır düğünü olacak. Geçmiş yılların sıcaklık ortalamalarına bakarak, 25°C açık, harika bir yaz aksamı olacağını umuyoruz. Dans ayakkabılarınızı giymeyi unutmayın! Gecemiz uzun, müziğimiz oynak, eğlencemiz bol olacak ;)</p>
+						
+					<br>	
+					</div>
+					<div class="col-sm-4 trauungcontent txtbronze">
+						<h1 class="txtpink infotitle" style="margin-bottom:10px;">Program</h1>
+						<p>11:00 &nbsp;&nbsp;Düğün Yemeği
+							<br> 18:00 &nbsp;&nbsp;Arkadaşlarımızla fotoğraf çekimi
+							<br> 19:00 &nbsp;&nbsp;Misafirlerimizin Park Beyaz'a gelişi
+							<br> 20:30 &nbsp;&nbsp;Gelin & Damadın ilk dansı
+							<br> 22:00 &nbsp;&nbsp;Düğün Pastası :)
+							<br> 23:00 &nbsp;&nbsp;Müzik grubumuz sahneyi DJ'e birakıyor
+							<br> 00:00 &nbsp;&nbsp;Mutlu son..
+						</p>
+
+					</div>
+					<div class="col-sm-4 trauungcontent txtbronze">
+						<h1 class="txtpink infotitle" style="margin-bottom:10px;">ULASIM</h1>
+						<p> Düğün yeri <a href='http://www.yda.aero/' target='_blank'>Dalaman Havalimanına</a> 25km uzaklıkta. Aşağıdaki harita size kolaylık sağlayacaktır. Havalimanında ve yakınında uygun fiyata araba kiralanabiliyor. Havalimanından Ortaca'ya Marmaris yönüne giden <a href='http://www.yda.aero/Dalaman_tr/otobus_ulasim.php' target='_blank'>Havaş servisleri</a> ile ulaşabilirsiniz. 
+						</p><p>Otobüs ile gelmek isteyenler <span class='txtpink'>Ortaca terminaline</span> <strong>'Kamil Koç'</strong> veya <strong>'Pamukkale Turizm'</strong> ile ulaşabilirler. Terminal'den <a href="#harita">düğün evi</a> 10 dakika yürüme mesafesinde bulunuyor. Dalyan'a da bu terminalden kalkan minibüsler mevcut. Ulaşım konusunda sorunuz olursa bizimle iletişime geçebilirsiniz. </p>
+
+					</div>
+					<div class="col-sm-4 trauungcontent txtbronze">
+						<h1 class="txtpink infotitle" style="margin-bottom:10px;">NEREDE KALINIR</h1>
+						<p>Kalınacak yer için en uygun seçim <a href="http://goo.gl/7PXjmI" target='_blank'>Dalyan</a></span> olacaktır. Dalyan kanalı kenarında Oda + Kahvaltı 2 kişilik oda fiyatları 80-200 TL arasında değişiyor. Kalabalık gruplar için 4-8 kişilik villalar da değerlendirilebilir. 
+							<br></p><p> Eğer her şey dahil ve daha lüks otel olsun isterseniz <strong>Sarıgerme</strong> sahilinde (yaklaşık 30 km uzaklıkta) 5 yıldızlı oteller bulabilirsiniz. </p><p>Alternatif olarak Köyceğiz ve Göcek 20 dakika, Fethiye 45 dakika, Marmaris  ve Akyaka 1 saat mesafede bulunuyor. 
+
+
+						</p>
+					</div>
+				</div>
+				
+				
+			</div>
+		</section>
+		<section id='todo'>
+		<div class="container">
+				<div class="row trauung english">
+							<div class="col-sm-12 trauungcontent txtbronze">
+					<h1 class="txtpink infotitle" style="margin-bottom:10px;text-align:center;" >Things to do</h1>
+					</div>
+		<div class="col-sm-4 trauungcontent txtbronze">	
+        <img src='./assets/images/iztuzu_beach1.jpg' style='max-width:100%;max-height:100%;'></img>	
+					<p><br>The vicinity boasts plenty of wonderful beaches around. Maybe the most famous one is Iztuzu Beach. It is a 4.5 km long, sandy beach, a unique natural beauty where the sea meets lake. </p>
+		</div>
+		<div class="col-sm-4 trauungcontent txtbronze">
+		<img src='./assets/images/kaya_mezarlari1.jpg' style='max-width:100%;max-height:100%;'></img>
+							<p><br>You can also join a canal tour on Dalyan to see ancient city 'Kaunos' and have a <strong>mud bath</strong>, a natural skin mask for your beauty. Don't forget to taste <strong>blue crab</strong>.
+					</p>
+		</div>
+		<div class="col-sm-4 trauungcontent txtbronze">
+		<img src='./assets/images/caretta1.jpg' style='max-width:100%;max-height:100%;'></img>
+					<p><br>Dalyan is not a destination only for tourists, but also for very distinct turtle species 'Caretta Caretta's. If you are lucky, you may see and feed them on Iztuzu Beach. There is even a Caretta Caretta hospital on the beach for their treatment.
+		
+					</p>
+		</div>
+		<div class="col-sm-12 trauungcontent txtbronze">
+		<p>If you want to explore further, Göcek is also not far away. There you can join a daily boat tour to discover various bays. It costs around 20€ per person including a lunch. Alternatively, <a href="http://static.panoramio.com/photos/large/22641562.jpg">Sarıgerme Beach</a> and <a href='https://goo.gl/kYOCMy'>Sarsala</a> bay are just 20 minutes away.<p>
+		<p>If you drive 75 km, Ölüdeniz welcomes you with its still sea and white sandy beach. There you can also do paragliding and visit <a href='https://goo.gl/cXJGzF' target='_blank'>Saklıkent Canyon</a>. 
+		</p><p>Are you looking for more? Contact us :)</p>
+		</div>
+		</div>
+		
+		<div class="row trauung turkish">
+							<div class="col-sm-12 trauungcontent txtbronze">
+					<h1 class="txtpink infotitle" style="margin-bottom:10px;text-align:center;" >GEZELIM GÖRELIM</h1>
+					</div>
+		<div class="col-sm-4 trauungcontent txtbronze">	
+        <img src='./assets/images/iztuzu_beach1.jpg' style='max-width:100%;max-height:100%;'></img>	
+					<p><br>Ortaca'nın etrafı harika plajlarla çevrili. Bunlardan belki de en meşhur olanı 4.5 km uzunluğunda kum sahil olan <strong>İztuzu Plajı</strong>. Iztuzu Plajı göl ve denizin keşiştiği yerde bir doğa harikası. Bu doğa olayına da <strong>'Dalyan'</strong> deniyor :)</p>
+		</div>
+		<div class="col-sm-4 trauungcontent txtbronze">
+		<img src='./assets/images/kaya_mezarlari1.jpg' style='max-width:100%;max-height:100%;'></img>
+							<p><br>Dalyan'a gelmişken, bir kanal turuna çıkıp, Kaya mezarlanı görüp ve güzelliğinize güzellik katacak çamur banyosu da yapabilirsiniz. Meşhur <strong>mavi yengeç</strong>'in de tadına bakmayı ihmal etmeyin.
+					</p>
+		</div>
+		<div class="col-sm-4 trauungcontent txtbronze">
+		<img src='./assets/images/caretta1.jpg' style='max-width:100%;max-height:100%;'></img>
+					<p><br>Dalyan sadece turistlerin değil, soyu tükenmekte olan <strong>'Caretta Caretta'</strong> kaplumbağalarının da vazgeçilmezi. Eğer şanslıysanız İztuzu sahilinde birkaçına rastlayıp besleme imkanı bulabilirsiniz. Sahilde bulunan Caretta Caretta hastanesi de ilginizi çekebilir.
+		
+					</p>
+		</div>
+		<div class="col-sm-12 trauungcontent txtbronze">
+		<p>Eğer daha çok vaktiniz varsa, <strong>Göcek</strong> sadece 20dakika uzaklıkta. Burda yat turlarına katılıp muhteşem Göcek koylarını keşfe çıkabilirsiniz. Yat turları sabah 10:00 gibi başlayıp 18:00 civarı sona eriyor. Fiyatlar öğle yemeği dahil kişi başı 60-75 TL arasında değişiyor. Yine 20 dakika mesafedeki <strong>'Sarıgerme Plajı'</strong> ve <strong>'Sarsala'</strong> koyu da görülmeye değer.
+		</p> 
+		<p> Bunların yanısıra yaklaşık 1 saat uzaklıktaki  <strong>Ölüdeniz</strong>,  <strong>Saklıkent</strong> ya da  <strong>Marmaris </strong>'in de tadını çıkartabilirsiniz.</p>
+		</div>
+		</div>
+		
+		</div>
+		</section>
+		<section id="harita">
+		<div class="container">
+				<div class="row trauung">
+				<h1 class="txtpink infotitle turkish" style="margin-bottom:10px;text-align:center;" >HARITA</h1>
+				<h1 class="txtpink infotitle english" style="margin-bottom:10px;text-align:center;" >MAP</h1>
+				<div class="col-sm-12 trauungcontent txtbronze">
+					<div class="gmap" id="map-canvas" style="margin-bottom:50px;"></div>
+				<div>
+				</div>
+		</div>
+		</section>
+		<section id="footer">
+		<div class="container">
+				<div class="row trauung">
+					<div class="col-sm-12 trauungcontent txtbronze">
+						<h1 style='color:black;text-align:center;'>Sevil <a href="#home"><span class="entypo-small" >♥</span></a> Cihan</h1>
+					</div>
+				</div>
+		</div>
+		</section>
+		
+		<div id="contact" class="new-modal">
+			<div class="container">
+				<div class="main">
+
+					<div class="close">
+						<a href="http://www.mycookroom.ru/mywork/Zooplex/#" class="modal-close"><i class="fa fa-times"></i></a>
+					</div>
+
+					<div class="title">
+						<h2>Contact Us</h2>
+					</div>
+
+					<div class="slogan">
+						<p>Integer mollis risus sem, at volutpat eros pellentesque in. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					</div>
+
+					<div class="forms">
+						<form>
+							<div class="form-group">
+								<label class="sr-only" for="name">Your name</label>
+								<input type="text" class="form-control" id="name" placeholder="Name" required="required">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="email">Email address</label>
+								<input type="email" class="form-control" id="email" placeholder="Email" required="required">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" id="message" placeholder="Message" rows="3" required="required"></textarea>
+							</div>
+							<button type="submit" class="btn btn-success">Submit</button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div><!-- /#contact -->
+
+		<div id="about" class="new-modal">
+			<div class="container">
+				<div class="main">
+
+					<div class="close">
+						<a href="http://www.mycookroom.ru/mywork/Zooplex/#" class="modal-close"><i class="fa fa-times"></i></a>
+					</div>
+
+					<div class="title">
+						<h2>About Us</h2>
+					</div>
+
+					<p>Integer mollis risus sem, at volutpat eros pellentesque in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean rhoncus porttitor nisi ut aliquam. Curabitur sed egestas velit.</p>
+					<p>Integer mollis risus sem, at volutpat eros pellentesque in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean rhoncus porttitor nisi ut aliquam. Curabitur sed egestas velit.</p>
+					<div class="row">
+						<div class="col-md-6">
+							<address>
+								<strong>Somethink, Inc.</strong><br>
+								795 Some Street, Suite 600<br>
+								Some City, CA 12345<br>
+								<abbr title="Phone">P:</abbr> (123) 456-7890
+							</address>
+						</div>
+
+						<div class="col-md-6">
+							<address>
+								<strong>Full Name</strong><br>
+								<a href="mailto:#">first.last@example.com</a>
+							</address>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div><!-- /#about -->
+
+		<div id="subscribe" class="new-modal">
+			<div class="container">
+				<div class="main">
+
+					<div class="close">
+						<a href="http://www.mycookroom.ru/mywork/Zooplex/#" class="modal-close"><i class="fa fa-times"></i></a>
+					</div>
+
+					<div class="title">
+						<h2>Subscribe Us Now</h2>
+					</div>
+
+					<div class="slogan">
+						<p>Integer mollis risus sem, at volutpat eros pellentesque in. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					</div>
+
+					<div class="forms">
+						<form>
+							<div class="form-group">
+								<input type="text" class="form-control" id="subscribe-email" placeholder="Enter email" required="required">
+								<button class="btn btn-success" type="submit">Notify me</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div><!-- /#subscribe -->
+
+
+
+   	<!-- Javascript files -->
+   	<!-- jQuery -->
+
+   	<!-- Bootstrap JS -->
+   	<script src="./Zooplex - Coming Soon Template_files/bootstrap.min.js"></script>
+   	<!-- Count Down - Time Circles  -->
+   	<script type="text/javascript" src="./Zooplex - Coming Soon Template_files/TimeCircles.js"></script>
+   	<!-- Vegas - Fullscreen Backgrounds and Slideshows -->
+    <script src="./Zooplex - Coming Soon Template_files/jquery.vegas.min.js"></script>
+   	<!-- Custom scripts -->
+   	<script type="text/javascript" src="./Zooplex - Coming Soon Template_files/custom.js"></script>
+
+</body></html>

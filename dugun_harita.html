@@ -1,0 +1,232 @@
+ï»¿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+    <title>Sevil & Cihan DÃ¼ÄŸÃ¼n</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+	  
+	p.highlight-map {
+     font: 700 2em/1em 'Amatic SC', sans-serif !important;
+     text-align: left; 
+	  color: #ff46af;
+    }
+
+    p.map {
+    font: 600 1.2em/1.4em 'Josefin Sans', sans-serif;
+    text-align: left; 
+	}
+	
+	a {
+     color: #ff46af;
+     text-decoration: none;
+	}
+	
+	.entypo {
+    font: normal 2em/0.7em 'entypo';
+    color: #ff46af; 
+   }
+    </style>
+	<link rel="stylesheet" href="font-face/entypo.css" />
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet" type="text/css">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script>
+// This example displays a marker at the center of Australia.
+// When the user clicks the marker, an info window opens.
+// 21014.de
+
+function initialize() {
+  var posBeyazPark = new google.maps.LatLng(36.8462975,28.6364893);
+  var posDugunEvi  = new google.maps.LatLng(36.8430817,28.7653958);
+  var posDlmAirport = new google.maps.LatLng(36.7242871,28.7899224);
+
+  var mapOptions = {
+    zoom: 11,
+    center: posDugunEvi,
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  
+  //http://www.entypo.com/
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  
+  var styles = [
+					  {
+					    stylers: [
+					      { gamma: 1.56 },
+					      { saturation: -10 },
+					      { hue: "#3399ff" }
+					    ]
+					  }
+					];
+  // map.setOptions({styles: styles, scrollwheel: true});
+
+  var descBeyazPark = '<div style="overflow: auto;"><p class="highlight-map txtpink"><strong>Saat: 19.00</strong> - Aksam burada egleniyoruz :)</p>'+
+  '<p class="map"><strong>Park Beyaz KÄ±r DÃ¼ÄŸÃ¼n AlanÄ±</strong><br>Åžehit Jandarma Remzi AvcÄ± Cd. Dalyan/MUÄžLA</p><p class="map">'+
+  '<a href="https://goo.gl/2C7weh" target="_blank"><span class="entypo"> &#59172;</span> &nbsp;Konumu aÃ§</a><br>'+
+  '<a href="https://goo.gl/qyeZNd" target="_blank"><span class="entypo">&#10150;</span> Rota hesapla</a></p></div>';
+  
+  var descDugunEvi = '<div style="overflow: auto;"><p class="highlight-map txtpink">Saat: 11.00 - 16.00 ArasÄ± DÃ¼gÃ¼n Yemegi</p>'+
+  '<p class="map"><strong>DÃ¼ÄŸÃ¼n Evi</strong><br>AtatÃ¼rk Mh. Lale Sokak No:36 Ortaca/MUÄžLA</p><p class="map">'+
+  '<a href="https://goo.gl/yb9p7V" target="_blank"><span class="entypo"> &#59172;</span> &nbsp;Konumu aÃ§</a><br>'+
+  '<a href="https://goo.gl/a4MSnx" target="_blank"><span class="entypo">âž¦</span>Rota hesapla</a></p></div>';
+
+   var descDlmAirport = '<div style="overflow: auto;"><p class="highlight-map txtpink">Dalaman Havalimani</p><p class="map">'+
+   '<a href="https://goo.gl/y1SQvm" target="_blank"><span class="entypo"> &#59172;</span> &nbsp;Konumu aÃ§</a><br>'+
+   '<a href="https://goo.gl/Yx3YhZ" target="_blank"><span class="entypo">âž¦</span> Rota hesapla</a></p></div>';
+  
+  
+  var infoBeyazPark = new google.maps.InfoWindow({
+      content: descBeyazPark
+  });
+  
+  var infoDugunEvi = new google.maps.InfoWindow({
+      content: descDugunEvi
+  });
+  
+  var infoDlmAirport = new google.maps.InfoWindow({
+      content: descDlmAirport
+  });
+
+     var heart = {
+	  path: "M36.3,17.5L20,32.4L3.7,17.5c-4.2-4-4.2-10.3,0-14.2c3.8-3.4,9.9-3.4,13.7,0L20,5.6l2.6-2.3c3.7-3.4,9.8-3.4,13.6,0C40.5,7.2,40.5,13.5,36.3,17.5z",
+	  fillColor: "#ff46af",
+	  fillOpacity: 1,
+	  scale: 1,
+	  strokeColor: "white",
+	  anchor: new google.maps.Point(20,30)
+	};
+  
+  
+  var markerBeyazPark = new google.maps.Marker({
+      position: posBeyazPark,
+      map: map,
+      title: 'Park Beyaz',
+	  animation: google.maps.Animation.DROP,
+	  icon: 'marker-icon-small.png'
+  });
+  
+  var markerDugunEvi = new google.maps.Marker({
+      position: posDugunEvi,
+      map: map,
+	  animation: google.maps.Animation.DROP,
+      title: 'DÃ¼ÄŸÃ¼n Evi'
+  });
+  
+  var markerDlmAirport = new google.maps.Marker({
+      position: posDlmAirport,
+      map: map,
+	  animation: google.maps.Animation.DROP,
+      title: 'Dalaman Havalimani'
+  });
+  
+
+  
+  google.maps.event.addListener(markerBeyazPark, 'click', function() {
+    infoBeyazPark.open(map,markerBeyazPark);
+	infoDugunEvi.close();
+	infoDlmAirport.close();
+  });
+  
+  google.maps.event.addListener(markerDugunEvi, 'click', function() {
+    infoDugunEvi.open(map,markerDugunEvi);
+	infoBeyazPark.close();
+	infoDlmAirport.close();
+  });
+  
+  google.maps.event.addListener(markerDlmAirport, 'click', function() {
+    infoDlmAirport.open(map,markerDlmAirport);
+	infoBeyazPark.close();
+	infoDugunEvi.close();
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>
+
+<script>/*
+$(document).ready(function() { initialize(); });
+
+function initialize(){
+    var mapOptions = {
+        center: new google.maps.LatLng(51.233503, 6.764356),
+        zoom: 11,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map-wrap"), mapOptions);
+                           
+    var styles = [
+					  {
+					    stylers: [
+					      { visibility: "simplified" },
+					      { gamma: 1.56 },
+					      { saturation: -10 },
+					      { hue: "#3399ff" }
+					    ]
+					  }
+					];
+	map.setOptions({styles: styles, scrollwheel: false});
+	
+	var info_window = new google.maps.InfoWindow({
+        content: 'loading'
+    });
+    
+    var herz = {
+	  path: "M36.3,17.5L20,32.4L3.7,17.5c-4.2-4-4.2-10.3,0-14.2c3.8-3.4,9.9-3.4,13.7,0L20,5.6l2.6-2.3c3.7-3.4,9.8-3.4,13.6,0C40.5,7.2,40.5,13.5,36.3,17.5z",
+	  fillColor: "#ff46af",
+	  fillOpacity: 1,
+	  scale: 1,
+	  strokeColor: "white",
+	  anchor: new google.maps.Point(20,30)
+	};
+    
+    var t = [];
+    var x = [];
+    var y = [];
+    var h = [];
+
+    t.push('Standesamt');
+    x.push(51.233276);
+    y.push(6.776613);
+    h.push('<p class="highlight-map txtpink">12.15 Uhr: Trauung</p><br><p class="map"><strong>Standesamt</strong><br>Inselstraße 17<br>40479 Düsseldorf</p><br><p class="map"><a href="https://www.google.com/maps/dir/Landeshauptstadt+Düsseldorf+-+Standesamt,+Inselstraße+17,+40479+Düsseldorf,+Deutschland//@51.233276,6.776613,17z/data=!4m8!4m7!1m5!1m1!1s0x47b8ca1fbbed8f3f:0x2fe0a923054b1aa9!2m2!1d6.776613!2d51.233276!1m0" target="_blank"><span class="entypo">&#59154;</span> Route ab hier</a><br><a href="https://www.google.com/maps/dir//Landeshauptstadt+Düsseldorf+-+Standesamt,+Inselstraße+17,+40479+Düsseldorf,+Deutschland/@51.233276,6.776613,17z/data=!4m12!1m3!3m2!1s0x47b8ca1fbbed8f3f:0x2fe0a923054b1aa9!2sLandeshauptstadt+Düsseldorf+-+Standesamt!4m7!1m0!1m5!1m1!1s0x47b8ca1fbbed8f3f:0x2fe0a923054b1aa9!2m2!1d6.776613!2d51.233276" target="_blank"><span class="entypo">&#10150;</span> Route nach hier</a><br><a href="files/Trauung-Caro-Johannes.ics"><span class="entypo">&#128197;</span> Termin eintragen</a></p><br>');
+
+    t.push('Hyatt Regency');
+    x.push(51.21682);
+    y.push(6.752992);
+    h.push('<p class="highlight-map txtpink">13.00 Uhr: Mittagessen<br>19.00 Uhr: Party Time</p><br><p class="map"><strong>Hyatt Regency</strong><br>Speditionstraße 19<br>40221 Düsseldorf</p><br><p class="map"><a href="http://dusseldorf.regency.hyatt.com/content/propertywebsites/hotels/regency/dusse/de/our-hotel/parking.html"><span class="entypo">&#59172;</span> Parkhaus Hyatt (23,-/24h)</a><br><a href="http://www.parkopedia.de/parken/parkplatz/im_medienhafen/40221/düsseldorf/"><span class="entypo">&#59172;</span> Parkplatz vorm Hyatt (15,-/24h)</a><br><a href="https://www.google.com/maps/dir/Hyatt+Regency+Düsseldorf,+Speditionstraße+19,+40221+Düsseldorf,+Deutschland//@51.2153583,6.7456213,15z/data=!4m8!4m7!1m5!1m1!1s0x47b8ca0b15ab4bcf:0xaa3e03f46afaacba!2m2!1d6.752992!2d51.21682!1m0" target="_blank"><span class="entypo">&#59154;</span> Route ab hier</a><br><a href="https://www.google.com/maps/dir//Hyatt+Regency+Düsseldorf,+Speditionstraße+19,+40221+Düsseldorf,+Deutschland/@51.2153583,6.7456213,15z/data=!4m12!1m3!3m2!1s0x0:0xaa3e03f46afaacba!2sHyatt+Regency+Düsseldorf!4m7!1m0!1m5!1m1!1s0x47b8ca0b15ab4bcf:0xaa3e03f46afaacba!2m2!1d6.752992!2d51.21682" target="_blank"><span class="entypo">&#10150;</span> Route nach hier</a><br><a href="files/Hochzeitsparty-Caro-und-Johannes.ics"><span class="entypo">&#128197;</span> Termin eintragen</a></p><br>');
+
+    var i = 0;
+    for ( item in t ) {
+        var m = new google.maps.Marker({
+            map:       map,
+            animation: google.maps.Animation.DROP,
+            title:     t[i],
+            position:  new google.maps.LatLng(x[i],y[i]),
+            html:      h[i],
+            icon: 		herz
+        });
+
+        google.maps.event.addListener(m, 'click', function() {
+            info_window.setContent(this.html);
+            info_window.open(map, this);
+        });
+        i++;
+    }		
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+*/
+</script>
